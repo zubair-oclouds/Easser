@@ -1,0 +1,124 @@
+body {
+  background-color: #d1f1fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  border-radius: 1em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  &:hover {
+    border: 3px solid #0aaaf4;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+}
+
+.container span:first-child {
+  color: #0a2137;
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.container span:last-child {
+  align-self: flex-end;
+  color: #0a2137;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 8%;
+}
+
+.container div {
+  width: 200px;
+  padding: 0.3em 0.6em;
+  border-radius: 0.3em;
+}
+
+.container div img {
+  width: 1.4em;
+}
+
+.container form div,
+.container form div input,
+.container form div input:active {
+  background-color: #dedede;
+  border-width: 0px;
+  outline: none;
+  width: 80%;
+}
+
+.container form div {
+  border: 3px solid #dedede;
+}
+.container form div:hover {
+  border: 3px solid #0aaaf4;
+}
+
+.container:has(.container form div:hover) {
+  background-color: yellow;
+}
+
+#inp-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #0d3a63;
+  color: white;
+  padding: 1em 5em;
+  border-width: 0px;
+  border-radius: 0.5em;
+  transform: all 0.3s;
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 1%;
+  display:flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 250px;
+  }
+
+  .container img {
+    width: 150px;
+  }
+
+  span:first-child {
+    color: #0a2137;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+
+  .footer span {
+    font-size: 10px;
+  }
+}
